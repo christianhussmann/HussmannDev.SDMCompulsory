@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>Infrastructure</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HussmannDev.SDMCompulsory.Core\HussmannDev.SDMCompulsory.Core.csproj" />
+      <ProjectReference Include="..\HussmannDev.SDMCompulsory.Domain\HussmannDev.SDMCompulsory.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Moq" Version="4.16.1" />
+    </ItemGroup>
+
+</Project>
