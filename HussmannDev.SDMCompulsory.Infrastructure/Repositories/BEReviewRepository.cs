@@ -5,7 +5,7 @@ namespace Infrastructure.Repositories
 {
     public class BEReviewRepository : IBEReviewRepository
     {
-        private readonly DbContext _ctx;
+        
         public int GetNumberOfReviewsFromReviewer(int reviewer)
         {
             throw new System.NotImplementedException();
