@@ -17,6 +17,34 @@ namespace TestProject1
         }
 
         [Fact]
+        public void GetNumberOfReviewsFromReviewer()
+        {
+            Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
+
+            //BEReviewRepository mService = new BEReviewRepository(m.Object);
+
+            //mService.GetNumberOfReviewsFromReviewer();
+        }
+
+        [Fact]
+        public void GetAverageRateFromReviewer()
+        {
+            
+        }
+
+        [Fact]
+        public void GetNumberOfRatesByReviewer()
+        {
+            
+        }
+
+        [Fact]
+        public void GetNumberOfReviews()
+        {
+            
+        }
+        
+        [Fact]
         public void GetAverageRateOfMovie()
         {
             Mock<IBEReviewRepository> mock = new Mock<IBEReviewRepository>();
@@ -32,8 +60,8 @@ namespace TestProject1
             mock.Setup(mock => mock.GetAllReviews()).Returns(() => returnValue);
 
             BEReviewService _reviewService = new BEReviewService(mock.Object);
-            
-            double actualResult = _reviewService.GetAverageRateOfMovie(2)
+
+            double actualResult = _reviewService.GetAverageRateOfMovie(2);
         }
 
         [Fact]
