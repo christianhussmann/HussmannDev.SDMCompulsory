@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using HussmannDev.SDMCompulsory.Core.Models;
 using HussmannDev.SDMCompulsory.Domain.IRepositories;
 using HussmannDev.SDMCompulsory.Domain.Services;
@@ -22,27 +21,9 @@ namespace TestProject1
         {
             Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
 
-            BEReview[] returnValue =
-            {
-                new BEReview() {Reviewer = 1, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
-                new BEReview() {Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
-                new BEReview() {Reviewer = 1, Grade = 2, Movie = 3, ReviewDate = DateTime.Now},
-                new BEReview() {Reviewer = 1, Grade = 2, Movie = 4, ReviewDate = DateTime.Now},
-                new BEReview() {Reviewer = 1, Grade = 2, Movie = 5, ReviewDate = DateTime.Now},
-                new BEReview() {Reviewer = 1, Grade = 2, Movie = 6, ReviewDate = DateTime.Now},
-                new BEReview() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
-            };
-            m.Setup(m => m.GetAllReviews()).Returns(() => returnValue);
+            //BEReviewRepository mService = new BEReviewRepository(m.Object);
 
-            BEReviewService mService = new BEReviewService(m.Object);
-            
-            //Act
-            int actualResult = mService.GetNumberOfReviewsFromReviewer(1);
-            
-            //Assert
-            m.Verify(m => m.GetAllReviews(), Times.Once);
-            
-            Assert.True(actualResult == 6);
+            //mService.GetNumberOfReviewsFromReviewer();
         }
 
         [Fact]
