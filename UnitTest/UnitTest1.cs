@@ -16,6 +16,24 @@ namespace TestProject1
         {
             
         }
+
+        [Fact]
+        public void GetTopRatedMovies()
+        {
+            
+        }
+
+        [Fact]
+        public void GetTopMoviesByReviewer()
+        {
+            
+        }
+
+        [Fact]
+        public void GetReviewersByMovie()
+        {
+            
+        }
         
     }
 }
