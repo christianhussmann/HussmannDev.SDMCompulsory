@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
+using HussmannDev.SDMCompulsory.Core.IServices;
+using HussmannDev.SDMCompulsory.Core.Models;
 using HussmannDev.SDMCompulsory.Domain.IRepositories;
 
 namespace HussmannDev.SDMCompulsory.Domain.Services
 {
-    public class BEReviewService : IBEReviewRepository
+    public class BEReviewService : IBEReviewService
     {
         private IBEReviewRepository _beReviewRepository;
         
@@ -14,57 +17,57 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
         
         public int GetNumberOfReviewsFromReviewer(int reviewer)
         {
-            return _beReviewRepository.GetNumberOfReviewsFromReviewer(reviewer);
+            throw new NotImplementedException();
         }
 
         public double GetAverageRateFromReviewer(int reviewer)
         {
-            return _beReviewRepository.GetAverageRateFromReviewer(reviewer);
+            throw new NotImplementedException();
         }
 
         public int GetNumberOfRatesByReviewer(int reviewer, int rate)
         {
-            return _beReviewRepository.GetNumberOfRatesByReviewer(reviewer, rate);
+            throw new NotImplementedException();
         }
 
         public int GetNumberOfReviews(int movie)
         {
-            return _beReviewRepository.GetNumberOfReviews(movie);
+            throw new NotImplementedException();
         }
 
         public double GetAverageRateOfMovie(int movie)
         {
-            return _beReviewRepository.GetAverageRateOfMovie(movie);
+            throw new NotImplementedException();
         }
 
         public int GetNumberOfRates(int movie, int rate)
         {
-            return _beReviewRepository.GetNumberOfRates(movie, rate);
+            throw new NotImplementedException();
         }
 
         public List<int> GetMoviesWithHighestNumberOfTopRates()
         {
-            return _beReviewRepository.GetMoviesWithHighestNumberOfTopRates();
+            throw new NotImplementedException();
         }
 
         public List<int> GetMostProductiveReviewers()
         {
-            return _beReviewRepository.GetMostProductiveReviewers();
+            throw new NotImplementedException();
         }
 
         public List<int> GetTopRatedMovies(int amount)
         {
-            return _beReviewRepository.GetTopRatedMovies(amount);
+            throw new NotImplementedException();
         }
 
         public List<int> GetTopMoviesByReviewer(int reviewer)
         {
-            return _beReviewRepository.GetTopMoviesByReviewer(reviewer);
+            throw new NotImplementedException();
         }
 
         public List<int> GetReviewersByMovie(int movie)
         {
-            return _beReviewRepository.GetReviewersByMovie(movie);
+            throw new NotImplementedException();
         }
     }
 }

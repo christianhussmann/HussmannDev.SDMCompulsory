@@ -1,64 +1,35 @@
+using System;
 using System.Collections.Generic;
+using HussmannDev.SDMCompulsory.Core.Models;
 using HussmannDev.SDMCompulsory.Domain.IRepositories;
 
 namespace Infrastructure.Repositories
 {
     public class BEReviewRepository : IBEReviewRepository
     {
-        
-        public int GetNumberOfReviewsFromReviewer(int reviewer)
+        private List<BEReview> reviews = new List<BEReview>()
         {
-            throw new System.NotImplementedException();
-        }
+            new BEReview {Grade = 6, Movie = 1, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(10)},
+            new BEReview {Grade = 4, Movie = 1, Reviewer = 2, ReviewDate = DateTime.Now},
+            new BEReview {Grade = 2, Movie = 1, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(-10)},
+            new BEReview {Grade = 7, Movie = 1, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(5)},
+            new BEReview {Grade = 5, Movie = 2, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(2)},
+            new BEReview {Grade = 7, Movie = 2, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(-50)},
+            new BEReview {Grade = 9, Movie = 2, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(20)},
+            new BEReview {Grade = 8, Movie = 2, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(-10)},
+            new BEReview {Grade = 3, Movie = 3, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(2)},
+            new BEReview {Grade = 2, Movie = 3, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(3)},
+            new BEReview {Grade = 4, Movie = 3, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(4)},
+            new BEReview {Grade = 5, Movie = 3, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(-2)},
+            new BEReview {Grade = 4, Movie = 4, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(2)},
+            new BEReview {Grade = 3, Movie = 4, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(-6)},
+            new BEReview {Grade = 1, Movie = 4, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(1)},
+            new BEReview {Grade = 3, Movie = 4, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(2)}
+        };
 
-        public double GetAverageRateFromReviewer(int reviewer)
+        public IEnumerable<BEReview> GetAllReviews()
         {
-            throw new System.NotImplementedException();
-        }
-
-        public int GetNumberOfRatesByReviewer(int reviewer, int rate)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public int GetNumberOfReviews(int movie)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public double GetAverageRateOfMovie(int movie)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public int GetNumberOfRates(int movie, int rate)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public List<int> GetMoviesWithHighestNumberOfTopRates()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public List<int> GetMostProductiveReviewers()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public List<int> GetTopRatedMovies(int amount)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public List<int> GetTopMoviesByReviewer(int reviewer)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public List<int> GetReviewersByMovie(int movie)
-        {
-            throw new System.NotImplementedException();
+            return reviews;
         }
     }
 }
