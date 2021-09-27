@@ -10,5 +10,12 @@ namespace TestProject1
         {
             
         }
+
+        [Fact]
+        public void GetAverageRateOfMovie()
+        {
+            
+        }
+        
     }
 }
