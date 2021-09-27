@@ -27,19 +27,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chri9\\.nuget\\packages\\": {}
+    "C:\\Users\\bruger\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj",
+      "projectUniqueName": "C:\\School Stuff\\C#Crashcourse\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj",
       "projectName": "HussmannDev.SDMCompulsory.Domain",
-      "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj",
-      "packagesPath": "C:\\Users\\chri9\\.nuget\\packages\\",
-      "outputPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\obj\\",
+      "projectPath": "C:\\School Stuff\\C#Crashcourse\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj",
+      "packagesPath": "C:\\Users\\bruger\\.nuget\\packages\\",
+      "outputPath": "C:\\School Stuff\\C#Crashcourse\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\chri9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +60,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
-              "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj"
+            "C:\\School Stuff\\C#Crashcourse\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
+              "projectPath": "C:\\School Stuff\\C#Crashcourse\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj"
             }
           }
         }
@@ -83,7 +90,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

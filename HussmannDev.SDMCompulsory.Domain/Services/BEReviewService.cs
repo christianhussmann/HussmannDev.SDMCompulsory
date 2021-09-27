@@ -14,10 +14,29 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
         {
             _beReviewRepository = beReviewRepository;
         }
-        
+
         public int GetNumberOfReviewsFromReviewer(int reviewer)
         {
-            throw new NotImplementedException();
+            if (reviewer < 1)
+            {
+                throw new ArgumentException("Invalid input!");
+            }
+
+            int numberOfReviews = 0;
+            foreach (var r in _beReviewRepository.GetAllReviews())
+            {
+                if (r.Reviewer == reviewer)
+                {
+                    numberOfReviews++;
+                }
+            }
+
+            if (numberOfReviews == 0)
+            {
+                throw new ArgumentException("No reviewer with that ID");
+            }
+
+            return numberOfReviews;
         }
 
         public double GetAverageRateFromReviewer(int reviewer)

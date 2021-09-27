@@ -31,5 +31,25 @@ namespace Infrastructure.Repositories
         {
             return reviews;
         }
+
+        public BEReview GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(BEReview p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(BEReview p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(BEReview p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
