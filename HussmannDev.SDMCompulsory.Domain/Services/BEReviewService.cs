@@ -59,13 +59,35 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
 
         public double GetAverageRateOfMovie(int movie)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            int numberOfReviews = 0;
+
+            foreach (BEReview review in _beReviewRepository.GetAllReviews())
+            {
+                if (review.Movie == movie)
+                {
+                    sum += review.Grade;
+                    numberOfReviews++;
+                }
+            }
+            return sum / numberOfReviews;
         }
 
         public int GetNumberOfRates(int movie, int rate)
         {
-            throw new NotImplementedException();
+            int result = 0;
+
+            foreach (BEReview review in _beReviewRepository.GetAllReviews())
+            {
+                if (review.Movie == movie && review.Grade == rate)
+                {
+                    result++;
+                }
+            }
+
+            return result;
         }
+        
 
         public List<int> GetMoviesWithHighestNumberOfTopRates()
         {
@@ -74,7 +96,16 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
 
         public List<int> GetMostProductiveReviewers()
         {
-            throw new NotImplementedException();
+            List<int> reviewers = new List<int>();
+
+            foreach (BEReview review in _beReviewRepository.GetAllReviews())
+            {
+                reviewers.Add(review.Reviewer);
+            }
+            
+            reviewers.Sort();
+            reviewers.Reverse();
+            return reviewers;
         }
 
         public List<int> GetTopRatedMovies(int amount)

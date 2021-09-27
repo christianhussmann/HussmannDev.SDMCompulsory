@@ -107,8 +107,66 @@ namespace TestProject1
             BEReviewService _reviewService = new BEReviewService(mock.Object);
 
             double actualResult = _reviewService.GetAverageRateOfMovie(2);
+            
+            mock.Verify(mock => mock.GetAllReviews(), Times.Once);
+            
+            Assert.True(actualResult == 3);
         }
 
+        [Fact]
+        public void GetNumberOfRates()
+        {
+            Mock<IBEReviewRepository> mock = new Mock<IBEReviewRepository>();
+
+            BEReview[] returnValue =
+            {
+                new BEReview {Grade = 1, Movie = 2, Reviewer = 1, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 2, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 5, Movie = 2, Reviewer = 3, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 4, ReviewDate = DateTime.Now},
+            };
+
+            mock.Setup(mock => mock.GetAllReviews()).Returns(() => returnValue);
+
+            BEReviewService _reviewService = new BEReviewService(mock.Object);
+
+            double actualResult = _reviewService.GetNumberOfRates(2, 3);
+            
+            mock.Verify(mock => mock.GetAllReviews(), Times.Once);
+            
+            Assert.True(actualResult == 2);
+        }
+
+        [Fact]
+        public void GetMostProductiveReviewers()
+        {
+            Mock<IBEReviewRepository> mock = new Mock<IBEReviewRepository>();
+
+            BEReview[] returnValue =
+            {
+                new BEReview {Grade = 1, Movie = 2, Reviewer = 1, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 2, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 5, Movie = 2, Reviewer = 3, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 4, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 5, Movie = 3, Reviewer = 4, ReviewDate = DateTime.Now},
+            };
+            
+            mock.Setup(mock => mock.GetAllReviews()).Returns(() => returnValue);
+
+            BEReviewService _reviewService = new BEReviewService(mock.Object);
+
+            List<int> actualResult = _reviewService.GetMostProductiveReviewers();
+
+            mock.Verify(mock => mock.GetAllReviews(), Times.Once);
+
+            Assert.Collection(actualResult,
+                item => Assert.Equal(4, item),
+                item => Assert.Equal(4, item),
+                item => Assert.Equal(3, item),
+                item => Assert.Equal(2, item),
+                item => Assert.Equal(1, item));
+        }
+        
         [Fact]
         public void GetTopRatedMovies()
         {

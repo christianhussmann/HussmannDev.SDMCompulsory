@@ -17,5 +17,6 @@ namespace HussmannDev.SDMCompulsory.Core.IServices
         List<int> GetReviewersByMovie(int movie);
 
         
+        
     }
 }
