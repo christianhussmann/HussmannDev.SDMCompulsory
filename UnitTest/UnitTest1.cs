@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using HussmannDev.SDMCompulsory.Core.IServices;
 using HussmannDev.SDMCompulsory.Core.Models;
 using HussmannDev.SDMCompulsory.Domain.IRepositories;
 using HussmannDev.SDMCompulsory.Domain.Services;
@@ -22,8 +23,7 @@ namespace TestProject1
         {
             {
                 Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
-
-                //BEReviewRepository mService = new BEReviewRepository(m.Object);
+                
                 BEReview[] returnValue =
                 {
                     new BEReview() {Reviewer = 1, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
@@ -35,8 +35,7 @@ namespace TestProject1
                     new BEReview() {Reviewer = 2, Grade = 2, Movie = 7, ReviewDate = DateTime.Now}
                 };
                 m.Setup(m => m.GetAllReviews()).Returns(() => returnValue);
-
-                //mService.GetNumberOfReviewsFromReviewer();
+                
                 BEReviewService mService = new BEReviewService(m.Object);
             
                 //Act
@@ -52,7 +51,30 @@ namespace TestProject1
         [Fact]
         public void GetAverageRateFromReviewer()
         {
+            //Arrange
+            Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
+
+            BEReview[] returnValue =
+            {
+                new BEReview() {Reviewer = 1, Grade = 1, Movie = 1, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 1, Movie = 2, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 5, Movie = 3, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 3, Movie = 4, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 1, Movie = 5, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 1, Movie = 6, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 1, Movie = 7, ReviewDate = DateTime.Now},
+            };
+            m.Setup(m => m.GetAllReviews()).Returns(() => returnValue);
+
+            BEReviewService mService = new BEReviewService(m.Object);
             
+            //Act
+            double actualResult = mService.GetAverageRateFromReviewer(1);
+            
+            //Assert
+            m.Verify(m=> m.GetAllReviews(), Times.Once);
+            
+            Assert.True(actualResult == 1.85);
         }
 
         [Fact]

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using HussmannDev.SDMCompulsory.Core.IServices;
 using HussmannDev.SDMCompulsory.Core.Models;
 using HussmannDev.SDMCompulsory.Domain.IRepositories;
@@ -17,11 +18,6 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
         
         public int GetNumberOfReviewsFromReviewer(int reviewer)
         {
-            if (reviewer < 1)
-            {
-                throw new ArgumentException("Cant cope with that shit input");
-            }
-
             int numberOfReviews = 0;
             foreach (var r in _beReviewRepository.GetAllReviews())
             {
@@ -30,18 +26,25 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
                     numberOfReviews++;
                 }
             }
-
-            if (numberOfReviews == 0)
-            {
-                throw new ArgumentException("No reviewer with that ID");
-            }
-
+            
             return numberOfReviews;
         }
 
         public double GetAverageRateFromReviewer(int reviewer)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            int numberOfReviews = 0;
+
+            var userRatings = _beReviewRepository.GetAllReviews().Where(r => r.Reviewer == reviewer).ToList();
+            
+
+            foreach (var r in userRatings)
+            {
+                sum += r.Grade;
+                numberOfReviews++;
+            }
+
+            return sum / numberOfReviews;
         }
 
         public int GetNumberOfRatesByReviewer(int reviewer, int rate)
