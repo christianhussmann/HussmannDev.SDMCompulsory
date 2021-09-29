@@ -138,6 +138,34 @@ namespace TestProject1
         }
 
         [Fact]
+        public void GetMoviesWithHighestNumberOfTopRates()
+        {
+            Mock<IBEReviewRepository> mock = new Mock<IBEReviewRepository>();
+
+            BEReview[] returnValue =
+            {
+                new BEReview {Grade = 5, Movie = 1, Reviewer = 1, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 2, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 5, Movie = 2, Reviewer = 3, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 4, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 5, Movie = 3, Reviewer = 4, ReviewDate = DateTime.Now},
+            };
+            
+            mock.Setup(mock => mock.GetAllReviews()).Returns(() => returnValue);
+
+            BEReviewService _reviewService = new BEReviewService(mock.Object);
+
+            List<int> actualResult = _reviewService.GetMoviesWithHighestNumberOfTopRates();
+
+            mock.Verify(mock => mock.GetAllReviews(), Times.Once);
+
+            Assert.Collection(actualResult,
+                item => Assert.Equal(1, item),
+                item => Assert.Equal(2, item),
+                item => Assert.Equal(3, item));
+        }
+
+        [Fact]
         public void GetMostProductiveReviewers()
         {
             Mock<IBEReviewRepository> mock = new Mock<IBEReviewRepository>();

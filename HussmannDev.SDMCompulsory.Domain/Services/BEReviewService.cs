@@ -91,7 +91,17 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
 
         public List<int> GetMoviesWithHighestNumberOfTopRates()
         {
-            throw new NotImplementedException();
+            List<int> movies = new List<int>();
+
+            foreach (var review in _beReviewRepository.GetAllReviews())
+            {
+                if (review.Grade == 5)
+                {
+                    movies.Add(review.Movie);
+                }
+            }
+            
+            return movies;
         }
 
         public List<int> GetMostProductiveReviewers()
