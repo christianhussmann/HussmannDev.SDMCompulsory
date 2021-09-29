@@ -74,7 +74,7 @@ namespace TestProject1
             //Assert
             m.Verify(m=> m.GetAllReviews(), Times.Once);
             
-            Assert.True(actualResult == 1.85);
+            Assert.True(actualResult == (1+1+5+3+1+1+1)/7);
         }
 
         [Fact]
