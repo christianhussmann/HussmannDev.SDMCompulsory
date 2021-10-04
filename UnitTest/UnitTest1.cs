@@ -287,24 +287,6 @@ namespace TestProject1
 
         
         [Fact]
-        public void GetTopRatedMoviesExceptionTest()
-        {
-            //Arrange
-            //Value which not should be implemented
-            Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
-            BEReviewService mService = new BEReviewService(m.Object);
-            
-            //Act
-            //List<int> actualResult = new List<int>(mService.GetTopRatedMovies(0));
-            mService.GetTopRatedMovies(0);
-            //Assert
-            var exception = Assert.Throws<Exception>(()=> mService.GetTopRatedMovies(0));
-            Assert.Equal("Amount must be above 0.", exception.Message);
-        }
-        
-        
-
-        [Fact]
         public void GetTopMoviesByReviewer()
         {
             //Arrange
