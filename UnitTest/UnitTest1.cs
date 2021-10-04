@@ -110,7 +110,30 @@ namespace TestProject1
         [Fact]
         public void GetNumberOfReviews()
         {
+            //Arrange
+            Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
+
+            BEReview[] returnValue =
+            {
+                new BEReview() {Reviewer = 1, Grade = 3, Movie = 1, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 2, Movie = 2, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 1, Movie = 2, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 5, Movie = 2, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 4, Movie = 5, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 2, Movie = 1, ReviewDate = DateTime.Now},
+                new BEReview() {Reviewer = 1, Grade = 1, Movie = 2, ReviewDate = DateTime.Now},
+            };
+            m.Setup(m => m.GetAllReviews()).Returns(() => returnValue);
+
+            BEReviewService mService = new BEReviewService(m.Object);
             
+            //Act
+            double actualResult = mService.GetNumberOfReviews(2);
+            
+            //Assert
+            m.Verify(m => m.GetAllReviews(), Times.Once);
+            
+            Assert.True(actualResult == 4);
         }
         
         [Fact]
