@@ -1,6 +1,10 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.ComponentModel;
 using System.Linq;
+using System.Linq.Expressions;
 using HussmannDev.SDMCompulsory.Core.IServices;
 using HussmannDev.SDMCompulsory.Core.Models;
 using HussmannDev.SDMCompulsory.Domain.IRepositories;
@@ -155,19 +159,108 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
             return reviewers;
         }
 
+        
+        
+        
+        
         public List<int> GetTopRatedMovies(int amount)
         {
-            throw new NotImplementedException();
+            //liste med BEReviews
+            List<BEReview> movies = new List<BEReview>();
+            foreach (var m in _beReviewRepository.GetAllReviews())
+            {
+                movies.Add(m);
+            }
+
+            //making an dictonary where key is the movie and value the average rating
+            Dictionary<int, double> averageRating = new Dictionary<int, double>();
+            
+            foreach (var m in movies)
+            {
+                try
+                {
+                    double d = 00.00;
+                    if (averageRating.TryGetValue(m.Movie, out d))
+                    {
+                        d = (d + m.Grade) ;
+                        averageRating.Remove(m.Movie);
+                        averageRating.Add(m.Movie, d);
+                    }
+                    else 
+                        averageRating.Add(m.Movie, m.Grade);
+                }
+                catch (ArgumentException e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+                
+            }
+
+            //Sort the dictonary by the value.
+            var myList = averageRating.ToList();
+            
+            myList.Sort((pair2, pair1) => pair1.Value.CompareTo(pair2.Value));
+            
+            //List the movies sorted by their average review.
+            List<int> anotherList = new List<int>();
+            
+            foreach (var m in myList)
+            {
+                anotherList.Add(m.Key);
+            }
+            
+
+            //Transforming the list to an list with the element size of "amount"
+            List<int> finalList = new List<int>();
+            
+            for (int i = 0; i < amount; i++)
+            {
+                finalList.Add(anotherList[i]);
+            }
+            return finalList;
         }
 
         public List<int> GetTopMoviesByReviewer(int reviewer)
         {
-            throw new NotImplementedException();
+            //Make a List filled with the movies the reviewer has reviewed.
+            
+            List<BEReview> reviewedVideos = new List<BEReview>();
+            foreach (var m in _beReviewRepository.GetAllReviews())
+            {
+                if (m.Reviewer.Equals(reviewer))
+                {
+                    reviewedVideos.Add(m);
+                }
+            }
+            
+            //Sort the List by rating first and then by review date
+            List<BEReview> SortedList = reviewedVideos.OrderByDescending(x => x.Grade)
+                .ThenBy(x => x.ReviewDate).ToList();
+
+            //transform the List<BEReview> to List<Int> so it can be returned.
+            List<int> moviesSortedByRatingAndDate = new List<int>();
+
+            foreach (var m in SortedList)
+            {
+                moviesSortedByRatingAndDate.Add(m.Movie);
+            }
+            
+            return moviesSortedByRatingAndDate;
         }
 
         public List<int> GetReviewersByMovie(int movie)
         {
-            throw new NotImplementedException();
+            List<int> movieReviewer = new List<int>();
+            
+            foreach (var m in _beReviewRepository.GetAllReviews())
+            {
+                if (m.Movie.Equals(movie))
+                {
+                    movieReviewer.Add(m.Reviewer);
+                }
+            }
+            return movieReviewer;
         }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\UnitTest\\UnitTest.csproj": {}
+    "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\UnitTest\\UnitTest.csproj": {}
   },
   "projects": {
-    "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
+    "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj",
+        "projectUniqueName": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj",
         "projectName": "HussmannDev.SDMCompulsory.Core",
-        "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj",
-        "packagesPath": "C:\\Users\\chri9\\.nuget\\packages\\",
-        "outputPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\obj\\",
+        "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj",
+        "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
+        "outputPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chri9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,17 +58,17 @@
         }
       }
     },
-    "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj": {
+    "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj",
+        "projectUniqueName": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj",
         "projectName": "HussmannDev.SDMCompulsory.Domain",
-        "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj",
-        "packagesPath": "C:\\Users\\chri9\\.nuget\\packages\\",
-        "outputPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\obj\\",
+        "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj",
+        "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
+        "outputPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chri9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +82,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
-                "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj"
+              "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
+                "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj"
               }
             }
           }
@@ -116,17 +116,17 @@
         }
       }
     },
-    "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj": {
+    "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj",
+        "projectUniqueName": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj",
         "projectName": "HussmannDev.SDMCompulsory.Infrastructure",
-        "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\chri9\\.nuget\\packages\\",
-        "outputPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\obj\\",
+        "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
+        "outputPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chri9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -140,11 +140,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
-                "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj"
+              "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
+                "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj"
               },
-              "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj": {
-                "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj"
+              "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj": {
+                "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj"
               }
             }
           }
@@ -183,17 +183,17 @@
         }
       }
     },
-    "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\UnitTest\\UnitTest.csproj": {
+    "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\UnitTest\\UnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\UnitTest\\UnitTest.csproj",
+        "projectUniqueName": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\UnitTest\\UnitTest.csproj",
         "projectName": "UnitTest",
-        "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\UnitTest\\UnitTest.csproj",
-        "packagesPath": "C:\\Users\\chri9\\.nuget\\packages\\",
-        "outputPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\UnitTest\\obj\\",
+        "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\UnitTest\\UnitTest.csproj",
+        "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
+        "outputPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\UnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chri9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -207,11 +207,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj": {
-                "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj"
+              "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj": {
+                "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj"
               },
-              "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj": {
-                "projectPath": "C:\\C#_CrashCourse\\FirstC#Compolsory\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj"
+              "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj": {
+                "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj"
               }
             }
           }

@@ -7,9 +7,11 @@ using HussmannDev.SDMCompulsory.Domain.Services;
 using Infrastructure.Repositories;
 using Moq;
 using Xunit;
+using Xunit.Sdk;
 
 namespace TestProject1
 {
+    
     public class UnitTest1
     {
         [Fact]
@@ -222,19 +224,142 @@ namespace TestProject1
         [Fact]
         public void GetTopRatedMovies()
         {
+            //Arrange
+            Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
+
+            BEReview[] returnValue =
+            {
+                new BEReview {Grade = 5, Movie = 1, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(10)},
+                new BEReview {Grade = 4, Movie = 1, Reviewer = 2, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 2, Movie = 1, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(-10)},
+                new BEReview {Grade = 5, Movie = 1, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(5)},
+                new BEReview {Grade = 3, Movie = 3, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(2)},
+                new BEReview {Grade = 2, Movie = 3, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(3)},
+                new BEReview {Grade = 4, Movie = 3, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(4)},
+                new BEReview {Grade = 5, Movie = 3, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(-2)},
+                new BEReview {Grade = 4, Movie = 4, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(2)},
+                new BEReview {Grade = 5, Movie = 4, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(-6)},
+                new BEReview {Grade = 3, Movie = 4, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(1)},
+                new BEReview {Grade = 3, Movie = 4, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(2)},
+                //Value which not should be implemented
+                new BEReview {Grade = 1, Movie = 2, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(2)},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(-50)},
+                new BEReview {Grade = 4, Movie = 2, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(20)},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(-10)}
+            };
+            m.Setup(m => m.GetAllReviews()).Returns(() => returnValue);
+            BEReviewService mService = new BEReviewService(m.Object);
             
+            //Act
+            List<int> actualResult = new List<int>(mService.GetTopRatedMovies(3));
+            
+            //Assert
+            //movie 1 = 4, movie 2 = 2.75, movie 3 = 3.5, movie 4 = 3.75
+            m.Verify(m => m.GetAllReviews(), Times.Once);
+            Assert.Collection(actualResult,
+                item => Assert.Equal(1, item),
+                item => Assert.Equal(4, item),
+                item => Assert.Equal(3, item));
         }
+
+        
+        [Fact]
+        public void GetTopRatedMoviesExceptionTest()
+        {
+            //Arrange
+            //Value which not should be implemented
+            Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
+            BEReviewService mService = new BEReviewService(m.Object);
+            
+            //Act
+            //List<int> actualResult = new List<int>(mService.GetTopRatedMovies(0));
+            mService.GetTopRatedMovies(0);
+            //Assert
+            var exception = Assert.Throws<Exception>(()=> mService.GetTopRatedMovies(0));
+            Assert.Equal("Amount must be above 0.", exception.Message);
+        }
+        
+        
 
         [Fact]
         public void GetTopMoviesByReviewer()
         {
+            //Arrange
+            Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
+
+            BEReview[] returnValue =
+            {
+                //Sorting test Values
+                new BEReview {Grade = 5, Movie = 1, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(-10)},
+                new BEReview {Grade = 5, Movie = 5, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(-8)},
+                new BEReview {Grade = 4, Movie = 6, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(-6)},
+                new BEReview {Grade = 4, Movie = 4, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(-4)},
+                new BEReview {Grade = 3, Movie = 3, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(-9)},
+                new BEReview {Grade = 1, Movie = 2, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(-8)},
+                
+                //Mock which should not be implementet because the user is not 1
+                new BEReview {Grade = 3, Movie = 3, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(-9)},
+                new BEReview {Grade = 1, Movie = 2, Reviewer = 6, ReviewDate = DateTime.Now.AddDays(-8)},
+                
+                
+            };
+            m.Setup(m => m.GetAllReviews()).Returns(() => returnValue);
             
+            BEReviewService mService = new BEReviewService(m.Object);
+            //Act
+            List<int> actualResult = mService.GetTopMoviesByReviewer(1);
+            //Assert
+            m.Verify(m => m.GetAllReviews(), Times.Once);
+            Assert.Collection(actualResult,
+                item => Assert.Equal(1, item),
+                item => Assert.Equal(5, item),
+                
+                item => Assert.Equal(6, item),
+                
+                item => Assert.Equal(4, item),
+                
+                item => Assert.Equal(3, item),
+                item => Assert.Equal(2, item));
         }
 
         [Fact]
         public void GetReviewersByMovie()
         {
+            //Arrange
+            Mock<IBEReviewRepository> m = new Mock<IBEReviewRepository>();
+
+            BEReview[] returnValue =
+            {
+                new BEReview {Grade = 5, Movie = 1, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(10)},
+                new BEReview {Grade = 4, Movie = 1, Reviewer = 2, ReviewDate = DateTime.Now},
+                new BEReview {Grade = 2, Movie = 1, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(-10)},
+                new BEReview {Grade = 5, Movie = 1, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(5)},
+                new BEReview {Grade = 1, Movie = 2, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(2)},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(-50)},
+                new BEReview {Grade = 4, Movie = 2, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(20)},
+                new BEReview {Grade = 3, Movie = 2, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(-10)},
+                new BEReview {Grade = 3, Movie = 3, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(2)},
+                new BEReview {Grade = 2, Movie = 3, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(3)},
+                new BEReview {Grade = 4, Movie = 3, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(4)},
+                new BEReview {Grade = 5, Movie = 3, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(-2)},
+                new BEReview {Grade = 4, Movie = 4, Reviewer = 1, ReviewDate = DateTime.Now.AddDays(2)},
+                new BEReview {Grade = 3, Movie = 4, Reviewer = 2, ReviewDate = DateTime.Now.AddDays(-6)},
+                new BEReview {Grade = 1, Movie = 4, Reviewer = 3, ReviewDate = DateTime.Now.AddDays(1)},
+                new BEReview {Grade = 3, Movie = 4, Reviewer = 4, ReviewDate = DateTime.Now.AddDays(2)}
+            };
+            m.Setup(m => m.GetAllReviews()).Returns(() => returnValue);
+            BEReviewService mService = new BEReviewService(m.Object);
             
+            //Act
+            List<int> actualResult = mService.GetReviewersByMovie(2);
+            
+            //Assert
+            m.Verify(m=> m.GetAllReviews(),Times.Once);
+            Assert.Collection(actualResult,
+                item=> Assert.Equal(1,item),
+                item=> Assert.Equal(2,item),
+                item=> Assert.Equal(3,item),
+                item=> Assert.Equal(4,item));
         }
         
     }
