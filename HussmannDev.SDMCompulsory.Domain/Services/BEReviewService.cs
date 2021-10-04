@@ -65,37 +65,15 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
 
             return numberOfRates;
         }
-        
-
-        public int GetNumberOfRatesByReviewer(int reviewer)
-        {
-            if (reviewer < 1)
-            {
-                throw new ArgumentException("Invalid input!");
-            }
-            int sum = 0;
-            int numberOfReviews = 0;
-
-            var userRatings = _beReviewRepository.GetAllReviews().Where(r => r.Reviewer == reviewer).ToList();
-
-            if (userRatings.Count == 0)
-            {
-                throw new ArgumentException("No Reviewer with that ID exist in the database!");
-            }
-
-            foreach (var r in userRatings)
-            {
-                sum += r.Grade;
-                numberOfReviews++;
-            }
-
-            return sum / numberOfReviews;
-        }
-        
 
         public int GetNumberOfReviews(int movie)
         {
-            throw new NotImplementedException();
+            if (movie < 1)
+            {
+                throw new ArgumentException("Invalid input chief!");
+            }
+
+            return _beReviewRepository.GetAllReviews().Where(r => r.Movie == movie).ToList().Count;
         }
 
         public double GetAverageRateOfMovie(int movie)
