@@ -201,8 +201,6 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
 
         public List<int> GetTopMoviesByReviewer(int reviewer)
         {
-            //Make a List filled with the movies the reviewer has reviewed.
-            
             List<BEReview> reviewedVideos = new List<BEReview>();
             foreach (var m in _beReviewRepository.GetAllReviews())
             {
@@ -212,17 +210,16 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
                 }
             }
             
-            //Sort the List by rating first and then by review date
-            List<BEReview> SortedList = reviewedVideos.OrderByDescending(x => x.Grade)
+            reviewedVideos.OrderByDescending(x => x.Grade)
                 .ThenBy(x => x.ReviewDate).ToList();
+            
+           List<int> moviesSortedByRatingAndDate = new List<int>();
 
-            //transform the List<BEReview> to List<Int> so it can be returned.
-            List<int> moviesSortedByRatingAndDate = new List<int>();
-
-            foreach (var m in SortedList)
+            foreach (var m in reviewedVideos)
             {
                 moviesSortedByRatingAndDate.Add(m.Movie);
             }
+            
             
             return moviesSortedByRatingAndDate;
         }

@@ -318,11 +318,8 @@ namespace TestProject1
             Assert.Collection(actualResult,
                 item => Assert.Equal(1, item),
                 item => Assert.Equal(5, item),
-                
                 item => Assert.Equal(6, item),
-                
                 item => Assert.Equal(4, item),
-                
                 item => Assert.Equal(3, item),
                 item => Assert.Equal(2, item));
         }
