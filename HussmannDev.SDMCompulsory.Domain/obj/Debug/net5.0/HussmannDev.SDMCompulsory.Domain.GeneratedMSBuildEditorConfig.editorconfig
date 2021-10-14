@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = HussmannDev.SDMCompulsory.Domain
-build_property.ProjectDir = C:\skole\3.Semester\SDM\HussmannDev.SDMCompulsory\HussmannDev.SDMCompulsory.Domain\
+build_property.ProjectDir = C:\GitHub\HussmannDev.SDMCompulsory\HussmannDev.SDMCompulsory.Domain\

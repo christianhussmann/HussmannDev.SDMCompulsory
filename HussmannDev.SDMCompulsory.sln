@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HussmannDev.SDMCompulsory.Infrastructure", "HussmannDev.SDMCompulsory.Infrastructure\HussmannDev.SDMCompulsory.Infrastructure.csproj", "{168CD502-08AE-48A8-AE11-E9E43722F1CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{1E371624-2579-4E77-A633-B92DF5EEF208}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{168CD502-08AE-48A8-AE11-E9E43722F1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{168CD502-08AE-48A8-AE11-E9E43722F1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{168CD502-08AE-48A8-AE11-E9E43722F1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E371624-2579-4E77-A633-B92DF5EEF208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E371624-2579-4E77-A633-B92DF5EEF208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E371624-2579-4E77-A633-B92DF5EEF208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E371624-2579-4E77-A633-B92DF5EEF208}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F23563F7-BA76-4D4B-8F4E-E4183333FA14} = {A5DDA36F-6D3C-493B-94D5-CD1AD3204B7C}

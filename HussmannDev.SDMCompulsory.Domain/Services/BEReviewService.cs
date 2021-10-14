@@ -14,12 +14,17 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
     public class BEReviewService : IBEReviewService
     {
         private IBEReviewRepository _beReviewRepository;
-        
+
         public BEReviewService(IBEReviewRepository beReviewRepository)
         {
             _beReviewRepository = beReviewRepository;
         }
-        
+
+        public IEnumerable<BEReview> GetAllReviews()
+        {
+            return _beReviewRepository.GetAllReviews();
+        }
+
         public int GetNumberOfReviewsFromReviewer(int reviewer)
         {
             int numberOfReviews = 0;

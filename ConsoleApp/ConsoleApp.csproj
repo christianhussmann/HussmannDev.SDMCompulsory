@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HussmannDev.SDMCompulsory.Core\HussmannDev.SDMCompulsory.Core.csproj" />
+      <ProjectReference Include="..\HussmannDev.SDMCompulsory.Domain\HussmannDev.SDMCompulsory.Domain.csproj" />
+      <ProjectReference Include="..\HussmannDev.SDMCompulsory.Infrastructure\HussmannDev.SDMCompulsory.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -114,6 +114,15 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -1527,6 +1536,33 @@
         "dotnet_library_license.txt",
         "netstandard.library.1.6.1.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -5132,23 +5168,24 @@
     "net5.0": [
       "HussmannDev.SDMCompulsory.Core >= 1.0.0",
       "HussmannDev.SDMCompulsory.Domain >= 1.0.0",
-      "Moq >= 4.16.1"
+      "Moq >= 4.16.1",
+      "Newtonsoft.Json >= 13.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\peter\\.nuget\\packages\\": {}
+    "C:\\Users\\mathi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj",
+      "projectUniqueName": "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj",
       "projectName": "HussmannDev.SDMCompulsory.Infrastructure",
-      "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-      "outputPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\obj\\",
+      "projectPath": "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\HussmannDev.SDMCompulsory.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\mathi\\.nuget\\packages\\",
+      "outputPath": "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mathi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5162,11 +5199,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
-              "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj"
+            "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
+              "projectPath": "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj"
             },
-            "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj": {
-              "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj"
+            "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj": {
+              "projectPath": "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Domain\\HussmannDev.SDMCompulsory.Domain.csproj"
             }
           }
         }
@@ -5184,6 +5221,10 @@
           "Moq": {
             "target": "Package",
             "version": "[4.16.1, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
           }
         },
         "imports": [

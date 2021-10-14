@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using HussmannDev.SDMCompulsory.Core.Models;
 
 namespace HussmannDev.SDMCompulsory.Core.IServices
 {
     public interface IBEReviewService
     {
+        IEnumerable<BEReview> GetAllReviews();
         int GetNumberOfReviewsFromReviewer(int reviewer);
         double GetAverageRateFromReviewer(int reviewer);
         int GetNumberOfRatesByReviewer(int reviewer, int rate);

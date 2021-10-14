@@ -5,7 +5,7 @@ using HussmannDev.SDMCompulsory.Domain.IRepositories;
 
 namespace Infrastructure.Repositories
 {
-    public class BEReviewRepository : IBEReviewRepository
+    public class BEReviewRepository
     {
         private List<BEReview> reviews = new List<BEReview>()
         {

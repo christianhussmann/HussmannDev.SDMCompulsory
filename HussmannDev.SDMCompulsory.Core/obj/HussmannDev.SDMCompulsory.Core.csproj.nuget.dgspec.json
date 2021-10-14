@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {}
+    "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {}
   },
   "projects": {
-    "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
+    "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj",
+        "projectUniqueName": "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj",
         "projectName": "HussmannDev.SDMCompulsory.Core",
-        "projectPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj",
-        "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-        "outputPath": "C:\\skole\\3.Semester\\SDM\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\obj\\",
+        "projectPath": "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\HussmannDev.SDMCompulsory.Core.csproj",
+        "packagesPath": "C:\\Users\\mathi\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\HussmannDev.SDMCompulsory\\HussmannDev.SDMCompulsory.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mathi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
