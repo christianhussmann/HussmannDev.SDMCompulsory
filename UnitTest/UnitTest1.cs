@@ -93,7 +93,7 @@ namespace TestProject1
                     new BEReview() {Reviewer = 2, Grade = 3, Movie = 4, ReviewDate = DateTime.Now},
                     new BEReview() {Reviewer = 1, Grade = 3, Movie = 5, ReviewDate = DateTime.Now},
                     new BEReview() {Reviewer = 1, Grade = 4, Movie = 6, ReviewDate = DateTime.Now},
-                    new BEReview() {Reviewer = 2, Grade = 3, Movie = 7, ReviewDate = DateTime.Now}
+                    new BEReview() {Reviewer = 1, Grade = 3, Movie = 7, ReviewDate = DateTime.Now}
                 };
                 m.Setup(m => m.GetAllReviews()).Returns(() => returnValue);
 
