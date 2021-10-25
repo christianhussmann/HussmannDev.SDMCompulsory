@@ -98,7 +98,7 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
 
             foreach (BEReview review in _beReviewRepository.GetAllReviews())
             {
-                if (review.Movie == ovie && review.Grade == rate)
+                if (review.Movie == movie && review.Grade == rate)
                 {
                     result++;
                 }
