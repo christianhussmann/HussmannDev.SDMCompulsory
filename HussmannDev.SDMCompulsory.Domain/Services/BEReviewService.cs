@@ -100,7 +100,7 @@ namespace HussmannDev.SDMCompulsory.Domain.Services
             {
                 if (review.Movie == movie && review.Grade == rate)
                 {
-                    result++;
+                    relt++;
                 }
             }
 
